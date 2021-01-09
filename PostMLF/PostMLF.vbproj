@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>PostMLF</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="AMMO.netstandard">
+      <HintPath>..\..\..\..\..\..\Program Files\Energy Exemplar\PLEXOS 8.2\AMMO.netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="EECOMPILER">
+      <HintPath>..\..\..\..\..\..\Program Files\Energy Exemplar\PLEXOS 8.2\EECOMPILER.dll</HintPath>
+    </Reference>
+    <Reference Include="EEPHASE">
+      <HintPath>..\..\..\..\..\..\Program Files\Energy Exemplar\PLEXOS 8.2\EEPHASE.dll</HintPath>
+    </Reference>
+    <Reference Include="EESolutionWrapper">
+      <HintPath>..\..\..\..\..\..\Program Files\Energy Exemplar\PLEXOS 8.2\EESolutionWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EESolver.netstandard">
+      <HintPath>..\..\..\..\..\..\Program Files\Energy Exemplar\PLEXOS 8.2\EESolver.netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="EEUTILITY">
+      <HintPath>..\..\..\..\..\..\Program Files\Energy Exemplar\PLEXOS 8.2\EEUTILITY.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

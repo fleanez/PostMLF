@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PostMLF": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Energy Exemplar\\PLEXOS 8.2\\PLEXOS64.exe"
+    }
+  }
+}
