@@ -16,7 +16,7 @@ donde:
 
 dPerd_k/dF_k: Marginal losses in branch "k"
 
-dF_k/dF_k: It is the PTDF for branch flow "k" to an injection at node "i" 
+dF_k/dP_i: It is the PTDF for branch flow "k" to an injection at node "i" 
 
 # Usage Instructions:
 
