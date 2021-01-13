@@ -41,13 +41,17 @@ Public Class MyModel
         'Next
 
         nZones = G_oPowerFlow.PTDFZones.Count
-        For nPeriod = 1 To CurrentModel.Steps.StepPeriodCountSansLookahead
+        For nPeriod = 1 To CurrentModel.Steps.StepPeriodCount
 
             Dim dPenaltyFactors As Double() = Enumerable.Repeat(1.0, nZones).ToArray
 
             For Each line As Line In G_oPowerFlow.ModeledLines
                 dMarginalLoss = line.MarginalLoss(nPeriod)
                 PTDF = line.PTDFsforPeriod.Invoke(nPeriod)
+
+                If (IsNothing(PTDF)) Then
+                    Continue For
+                End If
 
                 Debug.Assert(nZones = PTDF.Length, "Why these two are different?")
 
@@ -62,6 +66,10 @@ Public Class MyModel
             For Each trafo As Transformer In G_oPowerFlow.ModeledTransformers
                 dMarginalLoss = trafo.MarginalLoss(nPeriod)
                 PTDF = trafo.PTDFsforPeriod.Invoke(nPeriod)
+
+                If (IsNothing(PTDF)) Then
+                    Continue For
+                End If
 
                 Debug.Assert(nZones = PTDF.Length, "Why these two are different?")
 
